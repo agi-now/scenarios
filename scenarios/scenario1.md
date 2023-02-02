@@ -5,10 +5,12 @@
 find all text files in the current directory and move them to tmp
 
 ### query code
+```
 move(
     find_all(type=TextFile, inside=get_current_directory()),
     '/tmp',
 )
+```
 
 ### thoughts
 agent can use next pattern:

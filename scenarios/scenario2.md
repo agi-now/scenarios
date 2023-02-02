@@ -5,9 +5,11 @@
 remove all .py files
 
 ### query code
+```
 remove(
     find_all(type=PythonFile, inside=get_current_directory()),
 )
+```
 
 ### thoughts
 agent needs to understand that user is taking about PythonFile(s) somehow.
