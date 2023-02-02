@@ -1,17 +1,17 @@
-### categories
+## Categories
 - file system
 
-### query
+## Query
 remove all .py files
 
-### query code
+## Query code
 ```
 remove(
     find_all(type=PythonFile, inside=get_current_directory()),
 )
 ```
 
-### thoughts
+## Thoughts
 agent needs to understand that user is taking about PythonFile(s) somehow.  
 .py is an extension used by python files, how to store this idea in database?  
 
