@@ -29,11 +29,6 @@ query: count python files in this directory and print their names
 ---
 
 category: file system  
-query: write "hello world" to help.txt  
-
----
-
-category: file system  
 query: remove all lines in main.py that contain nubmers  
 
 ---
