@@ -20,4 +20,4 @@ Also agent should add newline before printing if the file does not end with it a
 This is something that needs to be generalised, but to generalise this agent also needs content of the file to see
 if it ends with '\n' or not and agent needs to know did the file exist when function was called.  
 So generalisation process depends on a set of function realisations with context.  
-Functions themselves are not enough.  
+Functions themselves are not enough.  Hierarchical
