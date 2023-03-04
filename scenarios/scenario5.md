@@ -28,4 +28,12 @@ In case of an error we will be able to select the next one, although it's not qu
 
 ### Interpreter
 The agent selected the function to execute and starts executing it.  
+For example function may be something like this:  
+```python
+def function1234(filename: FileName):
+  execute('touch ' + filename.value)
+```
+
+This code might have been provided by a user and it doesn't have proper escaping.  
+It's not a problem if it works but if there is a problem, then user should explain that filename should be escaped.  
 
