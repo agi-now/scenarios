@@ -1,20 +1,25 @@
+# Scenario 1
+
 ## Categories
+
 - file system
 
 ## Query
+
 remove all .py files
 
 ## Query code
-```
+
+```python
 remove(
     find_all(type=PythonFile, inside=get_current_directory()),
 )
 ```
 
 ## Thoughts
+
 agent needs to understand that user is taking about PythonFile(s) somehow.  
 .py is an extension used by python files, how to store this idea in database?  
-
 
 ---
 
@@ -29,7 +34,7 @@ query: count python files in this directory and print their names
 ---
 
 category: file system  
-query: remove all lines in main.py that contain nubmers  
+query: remove all lines in main.py that contain numbers  
 
 ---
 
