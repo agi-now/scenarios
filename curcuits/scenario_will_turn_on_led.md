@@ -19,7 +19,7 @@ Button {
 
 Button {
   id="btn-2",
-  label="B',
+  label="B",
   output_pin=0,
 }
 
