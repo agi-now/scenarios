@@ -8,7 +8,7 @@ a {
     e:waka}
 ```
 *de ladito*
-<no sé>
-\<sí sé\> los vuelve normales
-\- sí se normal
+
+\<sí sé\>
+\- sí se
 - no sé
