@@ -5,11 +5,11 @@
 *Result*:
 - KB += Button -> Object
 
-*User*: LED is an electronic component
+*User*: LED is an electronic component  
 *Result*:
 - KB += LED -> electronic_component
 
-*User*: LEDs are turned on when input_pin value is greater than 0
+*User*: LEDs are turned on when input_pin value is greater than 0  
 *Result*:
 - KB += LED
 - KB: LED.fields += input_pin(holds numeric value)
