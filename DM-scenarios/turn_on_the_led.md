@@ -8,11 +8,13 @@ Full representation of RW already is in agent's mind.
 ```js
 LED {
   id="led-1",
+  lit=False,
   input_pin=0,
 }
 
 Button {
   id="btn-1",
+  pressed=False
   output_pin=0,
 }
 
@@ -24,4 +26,13 @@ WireConnection {
 
 ## Interaction
 *User*: Turn on the LED  
-*Result*: LED turns on because the agent pressed the button.
+*Agent*: act.interact_with(Button,"press")
+
+::: LED turns on because the agent pressed the button.
+
+
+
+::: Some notes here:
+
+::: - "press" is a concept associated with provoking the event "press" to a button  
+::: - Besides several things, Agent knows that wire conections have the property of transmitting pin values
