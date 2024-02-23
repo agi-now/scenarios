@@ -1,3 +1,3 @@
 # TEST
 
-![Image]{IMGS\test_image.png}
+![Image](IMGS/test_image.png)
