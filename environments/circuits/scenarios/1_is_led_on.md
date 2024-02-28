@@ -1,3 +1,7 @@
+---
+problems: 1
+---
+
 # Is the LED on?
 
 ## Scenario
