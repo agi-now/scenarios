@@ -19,9 +19,9 @@ def metadata_extractor_AST(markdown_file):
     else:
         return 0
 
-def metadata_extractor_HTML(markdown_file):
+def metadata_extractor_HTML(markdown_file,HTML_file):
     lock = 0
-    for i in range(len(markdown_file,HTML_file)):
+    for i in range(len(markdown_file)):
         if len(markdown_file[i]) > 1:
             if list(markdown_file[i])[1] == "style":
                 metadata = [item['raw'] for item in markdown_file[i]['children'] if 'raw' in item]
@@ -66,7 +66,7 @@ for file_path, pathandname in zip(files_paths,zip(scenarios_paths,scenarios_name
 ###     OPENING ALL PROBLEMS
 files_paths = [path+"/problems/"+a for a in listdir(path+"/problems")]
 problems=[]
-problems_data[]
+problems_data=[]
 for file_path in files_paths:
     with open(file_path, 'r') as file:
         File = file.read()
@@ -215,7 +215,7 @@ list_of_scenarios = [{"path":path.split(".")[0]+".html", "description":"some des
 
 
 
-environment = Environment(loader=FileSystemLoader("frontend"))
+environment = Environment(loader=FileSystemLoader("frontend\\templates"))
 template = environment.get_template("menu_template.html")
 output = template.render(scenarios=list_of_scenarios)
 

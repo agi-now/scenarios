@@ -72,7 +72,9 @@
             </ul>
         </div>
         <div id="description" class="col s12">
-            {{scenario_content}}
+            {% for content in scenario_content %}
+                {{content}}
+            {% endfor %}
         </div>
         <div id="problems" class="col s12">
             <div class="collection">
@@ -86,11 +88,16 @@
             <!-- Content divs for each problem -->
             {% for problem in problems %}
                 <div id="problem{{ problem.id }}" class="content">
-                    {{ problem.description }}
+                    {% for description in problem.description%}
+                    {{ description }}
+                    {% endfor %}
+                    
                     <h2>Ideas</h2>
                     {% for idea in problem.ideas %}
                         <p>
-                            {{ idea }}
+                            {% for content in idea %}
+                                {{ content}}
+                            {% endfor %}
                         </p>
                     {% endfor %}
                 </div>
