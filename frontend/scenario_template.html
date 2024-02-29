@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{scenario_name}}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- MaterializeCSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <!-- jQuery CDN (required for MaterializeCSS) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- MaterializeCSS JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <script>
+        // Initialize tabs when the DOM is ready
+        $(document).ready(function(){
+            $('.tabs').tabs();
+        });
+
+        // Function to show/hide divs based on button clicks
+        function toggleDiv(divId) {
+            $('.content').hide(); // Hide all content divs
+            $('#' + divId).show(); // Show the clicked div
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: hsl(225, 59%, 7%);
+        }
+        .tabs {
+            background-color: hsl(225, 59%, 7%);
+        }
+        ul > li {
+            background-color: black;
+        }
+        #description {
+            color: white;
+            font-size: 20px;
+        }
+        .collection-item {
+            width: 50% !important;
+            display: inline-block !important;
+        }
+        .content {
+            display: none; /* Hide content divs by default */
+            margin-top: 10px; /* Add some space between buttons and content */
+            color:white;
+        }
+        /* #problem1 {color:white !important;}
+        #problem2 {color:white !important;}
+        #problem3 {color:white !important;}
+        #problem4 {color:white !important;} */
+
+        .button-back{color:white;}
+
+        .Header_scenario{color:white;}
+
+    </style>
+</head>
+<body>
+    <h1 class="Header_scenario">{{scenario_name}}</h1>
+    <div class="button-back">
+        <a class="waves-effect waves-light btn" href="menu.html">BACK</a>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s3"><a href="#description" class="active">Description</a></li>
+                <li class="tab col s3"><a href="#problems">Problems</a></li>
+            </ul>
+        </div>
+        <div id="description" class="col s12">
+            {{scenario_content}}
+        </div>
+        <div id="problems" class="col s12">
+            <div class="collection">
+                <!-- a for each problem as a button-->
+                {% for problem in problems %}
+                <a href="#!" class="collection-item" onclick="toggleDiv('problem{{ problem.id }}')">
+                    {{ problem.title }}
+                </a>
+                {% endfor %}
+            </div>
+            <!-- Content divs for each problem -->
+            {% for problem in problems %}
+                <div id="problem{{ problem.id }}" class="content">
+                    {{ problem.description }}
+                    <h2>Ideas</h2>
+                    {% for idea in problem.ideas %}
+                        <p>
+                            {{ idea }}
+                        </p>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+</body>
+</html>
