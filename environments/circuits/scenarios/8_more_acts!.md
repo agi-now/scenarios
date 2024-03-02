@@ -1,3 +1,7 @@
+---
+problems: 2
+---
+
 # Now one act isn't enough
 
 ## Scenario

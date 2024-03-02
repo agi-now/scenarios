@@ -2,14 +2,9 @@
 id: 1
 ideas: 1
 ---
-# Test Problem
+# Lack of speech
 
-Description describes the problem.  
-We need to show every line of this description.  
-
-**Even if it's bold**  
-
-And I hope you are protected against XSS attacks.  
-
-<script>javascript:alert("oops")</script>  
+We're missing two main things:  
+- A pathway that manages speech interactions
+- A system that connects reasoning and speech 
   

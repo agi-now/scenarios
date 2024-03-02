@@ -1,6 +1,6 @@
 ---
 id: 1
 ---
-# Idea №7
+# Idea №1
 
-**Seventh Idea!**
+**First Idea!**

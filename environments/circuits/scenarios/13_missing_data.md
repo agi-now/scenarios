@@ -1,3 +1,7 @@
+---
+problems: 3
+---
+
 # What's this?
 
 ## Scenario
