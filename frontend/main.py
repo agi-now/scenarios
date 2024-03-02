@@ -1,8 +1,9 @@
 from jinja2 import Environment, FileSystemLoader
 from mistune import markdown
 from bleach import clean
-from os import listdir, remove
-
+from os import listdir, remove, makedirs, rmdir
+from os import path as os_path
+from shutil import copy
 
 def metadata_extractor_AST(AST_file):
     for i, file_line in enumerate(AST_file):
@@ -24,9 +25,15 @@ def metadata_extractor_HTML(AST_file, HTML_file):
                 return (data, metadata)
     return False
 
-
-for filename in listdir("docs"):
-    remove("docs/" + filename)
+file_names = listdir("docs")
+for file_name in file_names:
+    if file_name != "IMGS":
+        remove("docs/" + file_name)
+    else:
+        img_file_names = listdir("docs/IMGS")
+        for img_file in img_file_names:
+            remove("docs/IMGS/" + img_file)
+        rmdir("docs/IMGS")
 
 with open(f'docs/CNAME', 'w') as file:
     file.write("colab.agi-now.com")
@@ -177,6 +184,18 @@ for problem in problems:
         if line["type"] == "heading":
             problem[0]["title"] = line["children"][0]["raw"]
 
+
+# Fixing source of Images for the HTML
+def replace_img_source(data):
+    if isinstance(data, list):
+        return [replace_img_source(item) for item in data]
+    elif isinstance(data, str):
+        return data.replace("../", "")
+    else:
+        return data
+    
+scenarios_data = replace_img_source(scenarios_data)
+
 # We'll make all scenarios.html
 for i, scenario in enumerate(scenarios):  # For each scenario...
     Automator = []
@@ -222,3 +241,17 @@ output = template.render(scenarios=list_of_scenarios)
 
 with open(f'docs/index.html', 'w') as file:
     file.write(output)  # Render the filled template
+
+
+# All of this copies the IMGS folder to the docs folder
+# Could be upgraded to just use mentioned IMGS, not all of them
+source_dir = path + "/IMGS"  
+destination_dir = "docs/IMGS"
+
+makedirs(destination_dir)
+files = listdir(source_dir)
+
+for file in files:
+    source_file = os_path.join(source_dir, file)
+    destination_file = os_path.join(destination_dir, file)
+    copy(source_file, destination_file)
