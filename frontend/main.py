@@ -25,8 +25,11 @@ def metadata_extractor_HTML(AST_file, HTML_file):
     return False
 
 
-for filename in listdir("frontend/webpage"):
-    remove("frontend/webpage/" + filename)
+for filename in listdir("docs"):
+    remove("docs/" + filename)
+
+with open(f'docs/CNAME', 'w') as file:
+    file.write("colab.agi-now.com")
 
 
 ### OPENING ALL SCENARIOS FILES
@@ -203,7 +206,7 @@ for scenario in scenarios:  # For each scenario...
         scenario_name=output_scenarios_names[i]  # This will be the title and header of the page
         )
 
-    with open(f'frontend/webpage/{output_scenarios_names[i]}.html', 'w') as file:
+    with open(f'docs/{output_scenarios_names[i]}.html', 'w') as file:
         file.write(output)  # Render the filled template
 
 # Now the menu.html
@@ -217,5 +220,5 @@ environment = Environment(loader=FileSystemLoader("frontend/templates"))
 template = environment.get_template("menu_template.html")
 output = template.render(scenarios=list_of_scenarios)
 
-with open(f'frontend/webpage/menu.html', 'w') as file:
+with open(f'docs/index.html', 'w') as file:
     file.write(output)  # Render the filled template
