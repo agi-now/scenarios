@@ -178,7 +178,7 @@ for problem in problems:
             problem[0]["title"] = line["children"][0]["raw"]
 
 # We'll make all scenarios.html
-for scenario in scenarios:  # For each scenario...
+for i, scenario in enumerate(scenarios):  # For each scenario...
     Automator = []
     for problem, problem_data in zip(problems, problems_data):  # For each problem
         if problem[0]["id"] in scenario[0]['problems']:  # If this problem is in the scenario
