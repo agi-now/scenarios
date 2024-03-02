@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- MaterializeCSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <!-- jQuery CDN (required for MaterializeCSS) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- MaterializeCSS JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <script>
+        // Initialize tabs when the DOM is ready
+        $(document).ready(function(){
+            $('.tabs').tabs();
+        });
+
+        // Function to show/hide divs based on button clicks
+        function toggleDiv(divId) {
+            $('.content').hide(); // Hide all content divs
+            $('#' + divId).show(); // Show the clicked div
+        }
+    </script>
+
+    <style>
+    h1 {font-family:Sans-serif;color:white;}
+    body {background-color:black;}
+    .content {color:white;}
+    .collection {
+            width: 50% !important;
+            display: inline-block !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>SCENARIOS</h1>
+
+    <div class="collection">
+        <a href="#!" class="collection-item" onclick="toggleDiv('problem1')">
+            circuits
+        </a>
+
+        <a href="#!" class="collection-item" onclick="toggleDiv('problem2')">
+            other env
+        </a>
+
+        <div id="problem1" class="content">
+                
+                <h3>1_is_led_on</h3>
+                <p>some description</p>
+                <a class="waves-effect waves-light btn" href="1_is_led_on.html">
+                    Go to scenario
+                </a>
+                
+        </div>
+    </div>
+</body>
+</html>
