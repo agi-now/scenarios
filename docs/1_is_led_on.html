@@ -4,19 +4,22 @@
     <title>1_is_led_on</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- MaterializeCSS CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.3-alpha/dist/css/materialize.min.css">
+    
     <link rel="stylesheet" href="/scenarios/static/main.css">
-
     <!-- jQuery CDN (required for MaterializeCSS) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <!-- MaterializeCSS JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.3-alpha/dist/js/materialize.min.js"></script>
     
     <script>
         // Initialize tabs when the DOM is ready
         $(document).ready(function(){
-            $('.tabs').tabs();
+            document.documentElement.setAttribute('theme', 'dark');
+            const el = document.getElementById('problem_list');
+            const options = {};
+            var instance = M.Tabs.init(el, options);
         });
 
         // Function to show/hide divs based on button clicks
@@ -46,7 +49,7 @@
         </div>
         <div class="row">
             <div class="col s12">
-                <ul class="tabs">
+                <ul class="tabs" id="problem_list">
                     <li class="tab col s6 m3"><a href="#description" class="active">Description</a></li>
                     <li class="tab col s6 m3"><a href="#problems">Problems</a></li>
                 </ul>
