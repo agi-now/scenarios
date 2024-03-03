@@ -8,7 +8,7 @@ from bleach import clean
 
 
 SITE_BASE_URL = os.getenv("SITE_BASE_URL", "/scenarios/")
-
+SITE_BASE_URL = ""
 
 def metadata_extractor_AST(AST_file):
     for i, file_line in enumerate(AST_file):
