@@ -6,6 +6,10 @@ from jinja2 import Environment, FileSystemLoader
 from mistune import markdown
 from bleach import clean
 
+
+SITE_BASE_URL = "/scenarios/"
+
+
 def metadata_extractor_AST(AST_file):
     for i, file_line in enumerate(AST_file):
         if len(file_line) > 1:
@@ -216,8 +220,9 @@ for i, scenario in enumerate(scenarios):  # For each scenario...
     output = template.render(
         scenario_content=scenarios_data[i][1],  # Description of each scenario
         problems=Automator,
-        scenario_name=output_scenarios_names[i]  # This will be the title and header of the page
-        )
+        scenario_name=output_scenarios_names[i],  # This will be the title and header of the page
+        site_base_url=SITE_BASE_URL,
+    )
 
     with open(f'docs/{output_scenarios_names[i]}.html', 'w') as file:
         file.write(output)  # Render the filled template
@@ -231,7 +236,10 @@ list_of_scenarios = [{
 
 environment = Environment(loader=FileSystemLoader("frontend/templates"))
 template = environment.get_template("menu_template.html")
-output = template.render(scenarios=list_of_scenarios)
+output = template.render(
+    scenarios=list_of_scenarios, 
+    site_base_url=SITE_BASE_URL,
+)
 
 with open(f'docs/index.html', 'w') as file:
     file.write(output)  # Render the filled template
