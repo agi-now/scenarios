@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- MaterializeCSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="/scenarios/static/main.css">
+    <link rel="stylesheet" href="/static/main.css">
 
     <!-- jQuery CDN (required for MaterializeCSS) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -40,7 +40,7 @@
             </div>
             <div class="col s3">
                 <div class="scenario-details-back-btn">
-                    <a class="waves-effect waves-light btn" href="/scenarios/">BACK</a>
+                    <a class="waves-effect waves-light btn" href="/">BACK</a>
                 </div>
             </div>
         </div>
@@ -73,46 +73,51 @@
                 
             </div>
             <div id="problems" class="col s12">
-                <div class="collection">
-                    <!-- a for each problem as a button-->
-                    
-                    <a href="#!" class="collection-item" onclick="toggleDiv('problem3')">
-                        Autonomous learning
-                    </a>
-                    
-                </div>
-                <!-- Content divs for each problem -->
-                
-                    <div id="problem3" class="content">
+                <div class="row">
+                    <div class="col s3 m2">
+                        <div class="collection">
+                            <!-- a for each problem as a button-->
+                            
+                            <a href="#!" class="collection-item" onclick="toggleDiv('problem3')">
+                                Autonomous learning
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="col s9 m10">
+                        <!-- Content divs for each problem -->
                         
-                        <hr />
-                        
-                        ideas: 1</h2>
-                        
-                        <h1>Autonomous learning</h1>
-                        
-                        <p>Sometimes you don't know it all, so you have to interact with your environment to find out things about it</p>
-                        
-                        
-                        
-                        
-                        <h2>Ideas</h2>
-                        
-                            <p>
-                                
-                                    <hr />
-                                
-                                    <h1>Idea №1</h1>
-                                
-                                    <p><strong>First Idea!</strong></p>
-                                
+                        <div id="problem3" class="content">
+                            
+                            <hr />
+                            
+                            ideas: 1</h2>
+                            
+                            <h1>Autonomous learning</h1>
+                            
+                            <p>Sometimes you don't know it all, so you have to interact with your environment to find out things about it</p>
+                            
+                            
+                            
+                            
+                            <h2>Ideas</h2>
+                            
+                                <p>
                                     
-                                
-                            </p>
+                                        <hr />
+                                    
+                                        <h1>Idea №1</h1>
+                                    
+                                        <p><strong>First Idea!</strong></p>
+                                    
+                                        
+                                    
+                                </p>
+                            
+                        </div>
                         
                     </div>
-                
-                
+                </div>
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@ from mistune import markdown
 from bleach import clean
 
 
-SITE_BASE_URL = "/scenarios/"
+SITE_BASE_URL = os.getenv("SITE_BASE_URL", "/scenarios/")
 
 
 def metadata_extractor_AST(AST_file):
@@ -32,9 +32,6 @@ def metadata_extractor_HTML(AST_file, HTML_file):
 
 shutil.rmtree("docs/")
 os.makedirs("docs/", exist_ok=True)
-
-with open(f'docs/CNAME', 'w') as file:
-    file.write("colab.agi-now.com")
 
 
 ### OPENING ALL SCENARIOS FILES
@@ -231,8 +228,8 @@ for i, scenario in enumerate(scenarios):  # For each scenario...
 list_of_scenarios = [{
     "path": path.split(".")[0]+".html",  # All scenario.html paths
     "description": "some description",  # Description for each scenario
-    "title": name}  # Displayed name
-    for path, name in zip(output_scenarios_paths, output_scenarios_names)]
+    "title": name
+} for path, name in zip(output_scenarios_paths, output_scenarios_names)]
 
 environment = Environment(loader=FileSystemLoader("frontend/templates"))
 template = environment.get_template("menu_template.html")

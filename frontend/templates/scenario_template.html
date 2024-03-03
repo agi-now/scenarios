@@ -57,32 +57,37 @@
                 {% endfor %}
             </div>
             <div id="problems" class="col s12">
-                <div class="collection">
-                    <!-- a for each problem as a button-->
-                    {% for problem in problems %}
-                    <a href="#!" class="collection-item" onclick="toggleDiv('problem{{ problem.id }}')">
-                        {{ problem.title }}
-                    </a>
-                    {% endfor %}
-                </div>
-                <!-- Content divs for each problem -->
-                {% for problem in problems %}
-                    <div id="problem{{ problem.id }}" class="content">
-                        {% for description in problem.description%}
-                        {{ description }}
-                        {% endfor %}
-                        
-                        <h2>Ideas</h2>
-                        {% for idea in problem.ideas %}
-                            <p>
-                                {% for content in idea %}
-                                    {{ content}}
-                                {% endfor %}
-                            </p>
+                <div class="row">
+                    <div class="col s3 m2">
+                        <div class="collection">
+                            <!-- a for each problem as a button-->
+                            {% for problem in problems %}
+                            <a href="#!" class="collection-item" onclick="toggleDiv('problem{{ problem.id }}')">
+                                {{ problem.title }}
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col s9 m10">
+                        <!-- Content divs for each problem -->
+                        {% for problem in problems %}
+                        <div id="problem{{ problem.id }}" class="content">
+                            {% for description in problem.description%}
+                            {{ description }}
+                            {% endfor %}
+                            
+                            <h2>Ideas</h2>
+                            {% for idea in problem.ideas %}
+                                <p>
+                                    {% for content in idea %}
+                                        {{ content}}
+                                    {% endfor %}
+                                </p>
+                            {% endfor %}
+                        </div>
                         {% endfor %}
                     </div>
-                {% endfor %}
-                
+                </div>
             </div>
         </div>
     </div>
