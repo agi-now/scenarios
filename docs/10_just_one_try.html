@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- MaterializeCSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
+    <link rel="stylesheet" href="/static/main.css">
+
     <!-- jQuery CDN (required for MaterializeCSS) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
@@ -26,146 +27,126 @@
     </script>
 
     <style>
-        body {
-            background-color: hsl(225, 59%, 7%);
-        }
-        .tabs {
-            background-color: hsl(225, 59%, 7%);
-        }
-        ul > li {
-            background-color: black;
-        }
-        #description {
-            color: white;
-            font-size: 20px;
-        }
-        .collection{
-            width: 50% !important;
-            display: inline-block !important;
-        }
         .content {
             display: none; /* Hide content divs by default */
-            margin-top: 10px; /* Add some space between buttons and content */
-            color:white;
         }
-        /* #problem1 {color:white !important;}
-        #problem2 {color:white !important;}
-        #problem3 {color:white !important;}
-        #problem4 {color:white !important;} */
-
-        .button-back{color:white;}
-
-        .Header_scenario{color:white;}
-
     </style>
 </head>
 <body>
-    <h1 class="Header_scenario">10_just_one_try</h1>
-    <div class="button-back">
-        <a class="waves-effect waves-light btn" href="index.html">BACK</a>
-    </div>
-    <div class="row">
-        <div class="col s12">
-            <ul class="tabs">
-                <li class="tab col s3"><a href="#description" class="active">Description</a></li>
-                <li class="tab col s3"><a href="#problems">Problems</a></li>
-            </ul>
+    <div class="container scenario-details">
+        <div class="row">
+            <div class="col s9">
+                <h1 class="scenario-details-title">10_just_one_try</h1>
+            </div>
+            <div class="col s3">
+                <div class="scenario-details-back-btn">
+                    <a class="waves-effect waves-light btn" href="/">BACK</a>
+                </div>
+            </div>
         </div>
-        <div id="description" class="col s12">
-            
-                <hr />
-            
-                <h1>Plan beforehand</h1>
-            
-                <h2>Scenario</h2>
-            
-                <p><img src="IMGS/8.png" alt="Image" /></p>
-            
-                <h2>Interaction</h2>
-            
-                <p><em>User</em>: Turn the LED on, you can only do 2 actions<br />
-            
-                <em>Agent</em>: ( flicks switch ), ( presses button )</p>
-            
-                <p>::: In here we discourage the agent from experimenting and accomplishing the goal thanks to probability, it has to reason all actions before carrying them out</p>
-            
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s6 m3"><a href="#description" class="active">Description</a></li>
+                    <li class="tab col s6 m3"><a href="#problems">Problems</a></li>
+                </ul>
+            </div>
+            <div id="description" class="col s12">
                 
-            
-        </div>
-        <div id="problems" class="col s12">
-            <div class="collection">
-                <!-- a for each problem as a button-->
+                    <hr />
                 
-                <a href="#!" class="collection-item" onclick="toggleDiv('problem2')">
-                    Sequenciation might be needed
-                </a>
+                    <h1>Plan beforehand</h1>
                 
-                <a href="#!" class="collection-item" onclick="toggleDiv('problem4')">
-                    Plan before acting!
-                </a>
+                    <h2>Scenario</h2>
+                
+                    <p><img src="IMGS/8.png" alt="Image" /></p>
+                
+                    <h2>Interaction</h2>
+                
+                    <p><em>User</em>: Turn the LED on, you can only do 2 actions<br />
+                
+                    <em>Agent</em>: ( flicks switch ), ( presses button )</p>
+                
+                    <p>::: In here we discourage the agent from experimenting and accomplishing the goal thanks to probability, it has to reason all actions before carrying them out</p>
+                
+                    
                 
             </div>
-            <!-- Content divs for each problem -->
-            
-                <div id="problem2" class="content">
+            <div id="problems" class="col s12">
+                <div class="collection">
+                    <!-- a for each problem as a button-->
                     
-                    <hr />
+                    <a href="#!" class="collection-item" onclick="toggleDiv('problem2')">
+                        Sequenciation might be needed
+                    </a>
                     
-                    ideas: 1</h2>
-                    
-                    <h1>Sequenciation might be needed</h1>
-                    
-                    <p>The solution to this scenario is made of several sequenciated parts, can't do all at once!</p>
-                    
-                    
-                    
-                    
-                    <h2>Ideas</h2>
-                    
-                        <p>
-                            
-                                <hr />
-                            
-                                <h1>Idea №1</h1>
-                            
-                                <p><strong>First Idea!</strong></p>
-                            
-                                
-                            
-                        </p>
+                    <a href="#!" class="collection-item" onclick="toggleDiv('problem4')">
+                        Plan before acting!
+                    </a>
                     
                 </div>
-            
-                <div id="problem4" class="content">
-                    
-                    <hr />
-                    
-                    ideas: 1</h2>
-                    
-                    <h1>Plan before acting!</h1>
-                    
-                    <p>Iterating, trying acts and learning from the environment is great!, it's a superb strategy to become smarter, but we can't always do that, so we must develop the ability to plan everything beforehand when the situation requires it</p>
-                    
-                    
-                    
-                    
-                    <h2>Ideas</h2>
-                    
-                        <p>
-                            
-                                <hr />
-                            
-                                <h1>Idea №1</h1>
-                            
-                                <p><strong>First Idea!</strong></p>
-                            
+                <!-- Content divs for each problem -->
+                
+                    <div id="problem2" class="content">
+                        
+                        <hr />
+                        
+                        ideas: 1</h2>
+                        
+                        <h1>Sequenciation might be needed</h1>
+                        
+                        <p>The solution to this scenario is made of several sequenciated parts, can't do all at once!</p>
+                        
+                        
+                        
+                        
+                        <h2>Ideas</h2>
+                        
+                            <p>
                                 
-                            
-                        </p>
-                    
-                </div>
-            
-            
+                                    <hr />
+                                
+                                    <h1>Idea №1</h1>
+                                
+                                    <p><strong>First Idea!</strong></p>
+                                
+                                    
+                                
+                            </p>
+                        
+                    </div>
+                
+                    <div id="problem4" class="content">
+                        
+                        <hr />
+                        
+                        ideas: 1</h2>
+                        
+                        <h1>Plan before acting!</h1>
+                        
+                        <p>Iterating, trying acts and learning from the environment is great!, it's a superb strategy to become smarter, but we can't always do that, so we must develop the ability to plan everything beforehand when the situation requires it</p>
+                        
+                        
+                        
+                        
+                        <h2>Ideas</h2>
+                        
+                            <p>
+                                
+                                    <hr />
+                                
+                                    <h1>Idea №1</h1>
+                                
+                                    <p><strong>First Idea!</strong></p>
+                                
+                                    
+                                
+                            </p>
+                        
+                    </div>
+                
+                
+            </div>
         </div>
     </div>
 </body>

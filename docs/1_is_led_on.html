@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- MaterializeCSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
+    <link rel="stylesheet" href="/static/main.css">
+
     <!-- jQuery CDN (required for MaterializeCSS) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
@@ -26,119 +27,99 @@
     </script>
 
     <style>
-        body {
-            background-color: hsl(225, 59%, 7%);
-        }
-        .tabs {
-            background-color: hsl(225, 59%, 7%);
-        }
-        ul > li {
-            background-color: black;
-        }
-        #description {
-            color: white;
-            font-size: 20px;
-        }
-        .collection{
-            width: 50% !important;
-            display: inline-block !important;
-        }
         .content {
             display: none; /* Hide content divs by default */
-            margin-top: 10px; /* Add some space between buttons and content */
-            color:white;
         }
-        /* #problem1 {color:white !important;}
-        #problem2 {color:white !important;}
-        #problem3 {color:white !important;}
-        #problem4 {color:white !important;} */
-
-        .button-back{color:white;}
-
-        .Header_scenario{color:white;}
-
     </style>
 </head>
 <body>
-    <h1 class="Header_scenario">1_is_led_on</h1>
-    <div class="button-back">
-        <a class="waves-effect waves-light btn" href="index.html">BACK</a>
-    </div>
-    <div class="row">
-        <div class="col s12">
-            <ul class="tabs">
-                <li class="tab col s3"><a href="#description" class="active">Description</a></li>
-                <li class="tab col s3"><a href="#problems">Problems</a></li>
-            </ul>
+    <div class="container scenario-details">
+        <div class="row">
+            <div class="col s9">
+                <h1 class="scenario-details-title">1_is_led_on</h1>
+            </div>
+            <div class="col s3">
+                <div class="scenario-details-back-btn">
+                    <a class="waves-effect waves-light btn" href="/">BACK</a>
+                </div>
+            </div>
         </div>
-        <div id="description" class="col s12">
-            
-                <hr />
-            
-                <h1>Is the LED on?</h1>
-            
-                <h2>Scenario</h2>
-            
-                <p>one turned on LED</p>
-            
-                <h2>Interaction</h2>
-            
-                <p><em>User</em>: Is the led on?<br />
-            
-                <em>Agent</em>: &amp;lt; Some positive answer &amp;gt;</p>
-            
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s6 m3"><a href="#description" class="active">Description</a></li>
+                    <li class="tab col s6 m3"><a href="#problems">Problems</a></li>
+                </ul>
+            </div>
+            <div id="description" class="col s12">
                 
-            
-        </div>
-        <div id="problems" class="col s12">
-            <div class="collection">
-                <!-- a for each problem as a button-->
+                    <hr />
                 
-                <a href="#!" class="collection-item" onclick="toggleDiv('problem1')">
-                    Lack of speech
-                </a>
+                    <h1>Is the LED on?</h1>
+                
+                    <h2>Scenario</h2>
+                
+                    <p>one turned on LED</p>
+                
+                    <h2>Interaction</h2>
+                
+                    <p><em>User</em>: Is the led on?<br />
+                
+                    <em>Agent</em>: &amp;lt; Some positive answer &amp;gt;</p>
+                
+                    
                 
             </div>
-            <!-- Content divs for each problem -->
-            
-                <div id="problem1" class="content">
+            <div id="problems" class="col s12">
+                <div class="collection">
+                    <!-- a for each problem as a button-->
                     
-                    <hr />
-                    
-                    ideas: 1</h2>
-                    
-                    <h1>Lack of speech</h1>
-                    
-                    <p>We're missing two main things:</p>
-                    
-                    <ul>
-                    
-                    <li>A pathway that manages speech interactions</li>
-                    
-                    <li>A system that connects reasoning and speech</li>
-                    
-                    </ul>
-                    
-                    
-                    
-                    
-                    <h2>Ideas</h2>
-                    
-                        <p>
-                            
-                                <hr />
-                            
-                                <h1>Idea №1</h1>
-                            
-                                <p><strong>First Idea!</strong></p>
-                            
-                                
-                            
-                        </p>
+                    <a href="#!" class="collection-item" onclick="toggleDiv('problem1')">
+                        Lack of speech
+                    </a>
                     
                 </div>
-            
-            
+                <!-- Content divs for each problem -->
+                
+                    <div id="problem1" class="content">
+                        
+                        <hr />
+                        
+                        ideas: 1</h2>
+                        
+                        <h1>Lack of speech</h1>
+                        
+                        <p>We're missing two main things:</p>
+                        
+                        <ul>
+                        
+                        <li>A pathway that manages speech interactions</li>
+                        
+                        <li>A system that connects reasoning and speech</li>
+                        
+                        </ul>
+                        
+                        
+                        
+                        
+                        <h2>Ideas</h2>
+                        
+                            <p>
+                                
+                                    <hr />
+                                
+                                    <h1>Idea №1</h1>
+                                
+                                    <p><strong>First Idea!</strong></p>
+                                
+                                    
+                                
+                            </p>
+                        
+                    </div>
+                
+                
+            </div>
         </div>
     </div>
 </body>

@@ -1,9 +1,10 @@
+import os
+import shutil
+import distutils.dir_util
+
 from jinja2 import Environment, FileSystemLoader
 from mistune import markdown
 from bleach import clean
-from os import listdir, remove, makedirs, rmdir
-from os import path as os_path
-from shutil import copy
 
 def metadata_extractor_AST(AST_file):
     for i, file_line in enumerate(AST_file):
@@ -25,15 +26,8 @@ def metadata_extractor_HTML(AST_file, HTML_file):
                 return (data, metadata)
     return False
 
-file_names = listdir("docs")
-for file_name in file_names:
-    if file_name != "IMGS":
-        remove("docs/" + file_name)
-    else:
-        img_file_names = listdir("docs/IMGS")
-        for img_file in img_file_names:
-            remove("docs/IMGS/" + img_file)
-        rmdir("docs/IMGS")
+shutil.rmtree("docs/")
+os.makedirs("docs/", exist_ok=True)
 
 with open(f'docs/CNAME', 'w') as file:
     file.write("colab.agi-now.com")
@@ -41,7 +35,7 @@ with open(f'docs/CNAME', 'w') as file:
 
 ### OPENING ALL SCENARIOS FILES
 path = "environments/circuits"
-scenarios_file_names = listdir(path + "/scenarios")
+scenarios_file_names = os.listdir(path + "/scenarios")
 files_paths = [path + "/scenarios/" + a for a in scenarios_file_names]
 scenarios_names = [a.split(".")[0] for a in scenarios_file_names]
 scenarios = []
@@ -65,7 +59,7 @@ for file_path, path_and_name in zip(files_paths, zip(scenarios_file_names, scena
 
 
 ### OPENING ALL PROBLEMS FILES
-files_paths = [path + "/problems/" + a for a in listdir(path + "/problems")]
+files_paths = [path + "/problems/" + a for a in os.listdir(path + "/problems")]
 problems = []
 problems_data = []
 for file_path in files_paths:
@@ -82,7 +76,7 @@ for file_path in files_paths:
 
 
 ### OPENING ALL IDEAS FILES
-files_paths = [path + "/ideas/" + a for a in listdir(path + "/ideas")]
+files_paths = [path + "/ideas/" + a for a in os.listdir(path + "/ideas")]
 ideas = []
 ideas_data = []
 for file_path in files_paths:
@@ -248,10 +242,12 @@ with open(f'docs/index.html', 'w') as file:
 source_dir = path + "/IMGS"  
 destination_dir = "docs/IMGS"
 
-makedirs(destination_dir)
-files = listdir(source_dir)
+os.makedirs(destination_dir)
+files = os.listdir(source_dir)
 
 for file in files:
-    source_file = os_path.join(source_dir, file)
-    destination_file = os_path.join(destination_dir, file)
-    copy(source_file, destination_file)
+    source_file = os.path.join(source_dir, file)
+    destination_file = os.path.join(destination_dir, file)
+    shutil.copy(source_file, destination_file)
+
+distutils.dir_util.copy_tree("frontend/static", "docs/static")

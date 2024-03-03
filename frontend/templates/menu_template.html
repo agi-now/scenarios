@@ -7,6 +7,7 @@
     <!-- MaterializeCSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     
+    <link rel="stylesheet" href="/static/main.css">
     <!-- jQuery CDN (required for MaterializeCSS) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
@@ -25,37 +26,33 @@
             $('#' + divId).show(); // Show the clicked div
         }
     </script>
-
-    <style>
-    h1 {font-family:Sans-serif;color:white;}
-    body {background-color:black;}
-    .content {color:white;}
-    .collection {
-            width: 50% !important;
-            display: inline-block !important;
-        }
-    </style>
 </head>
 <body>
-    <h1>SCENARIOS</h1>
-
-    <div class="collection">
-        <a href="#!" class="collection-item" onclick="toggleDiv('problem1')">
-            circuits
-        </a>
-
-        <a href="#!" class="collection-item" onclick="toggleDiv('problem2')">
-            other env
-        </a>
-
-        <div id="problem1" class="content">
-                {% for scenario in scenarios %}
-                <h3>{{scenario.title}}</h3>
-                <p>{{scenario.description}}</p>
-                <a class="waves-effect waves-light btn" href="{{scenario.path}}">
-                    Go to scenario
-                </a>
-                {% endfor %}
+    <div class="container scenarios-menu">
+        <h1>SCENARIOS</h1>
+        <div class="row">
+            <div class="col s4 m2 scenarios-menu-list">
+                <div class="collection">
+                    <a href="#!" class="collection-item" onclick="toggleDiv('problem1')">
+                        circuits
+                    </a>
+                    <a href="#!" class="collection-item" onclick="toggleDiv('problem2')">
+                        other env
+                    </a>
+                </div>
+            </div>
+            <div class="col s8 m10 no-padding-left">
+                <div class="collection">
+                    <div id="problem1" class="content">
+                        {% for scenario in scenarios %}
+                        <a href="{{scenario.path}}" class="collection-item">
+                            <h3 class="scenario-item-title">{{scenario.title}}</h3>
+                            <p>{{scenario.description}}</p>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

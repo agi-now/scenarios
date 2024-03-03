@@ -7,6 +7,7 @@
     <!-- MaterializeCSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     
+    <link rel="stylesheet" href="/static/main.css">
     <!-- jQuery CDN (required for MaterializeCSS) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
@@ -25,55 +26,48 @@
             $('#' + divId).show(); // Show the clicked div
         }
     </script>
-
-    <style>
-    h1 {font-family:Sans-serif;color:white;}
-    body {background-color:black;}
-    .content {color:white;}
-    .collection {
-            width: 50% !important;
-            display: inline-block !important;
-        }
-    </style>
 </head>
 <body>
-    <h1>SCENARIOS</h1>
-
-    <div class="collection">
-        <a href="#!" class="collection-item" onclick="toggleDiv('problem1')">
-            circuits
-        </a>
-
-        <a href="#!" class="collection-item" onclick="toggleDiv('problem2')">
-            other env
-        </a>
-
-        <div id="problem1" class="content">
-                
-                <h3>10_just_one_try</h3>
-                <p>some description</p>
-                <a class="waves-effect waves-light btn" href="10_just_one_try.html">
-                    Go to scenario
-                </a>
-                
-                <h3>13_missing_data</h3>
-                <p>some description</p>
-                <a class="waves-effect waves-light btn" href="13_missing_data.html">
-                    Go to scenario
-                </a>
-                
-                <h3>1_is_led_on</h3>
-                <p>some description</p>
-                <a class="waves-effect waves-light btn" href="1_is_led_on.html">
-                    Go to scenario
-                </a>
-                
-                <h3>8_more_acts!</h3>
-                <p>some description</p>
-                <a class="waves-effect waves-light btn" href="8_more_acts!.html">
-                    Go to scenario
-                </a>
-                
+    <div class="container scenarios-menu">
+        <h1>SCENARIOS</h1>
+        <div class="row">
+            <div class="col s4 m2 scenarios-menu-list">
+                <div class="collection">
+                    <a href="#!" class="collection-item" onclick="toggleDiv('problem1')">
+                        circuits
+                    </a>
+                    <a href="#!" class="collection-item" onclick="toggleDiv('problem2')">
+                        other env
+                    </a>
+                </div>
+            </div>
+            <div class="col s8 m10 no-padding-left">
+                <div class="collection">
+                    <div id="problem1" class="content">
+                        
+                        <a href="1_is_led_on.html" class="collection-item">
+                            <h3 class="scenario-item-title">1_is_led_on</h3>
+                            <p>some description</p>
+                        </a>
+                        
+                        <a href="8_more_acts!.html" class="collection-item">
+                            <h3 class="scenario-item-title">8_more_acts!</h3>
+                            <p>some description</p>
+                        </a>
+                        
+                        <a href="13_missing_data.html" class="collection-item">
+                            <h3 class="scenario-item-title">13_missing_data</h3>
+                            <p>some description</p>
+                        </a>
+                        
+                        <a href="10_just_one_try.html" class="collection-item">
+                            <h3 class="scenario-item-title">10_just_one_try</h3>
+                            <p>some description</p>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
