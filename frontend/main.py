@@ -30,7 +30,8 @@ def metadata_extractor_HTML(AST_file, HTML_file):
                 return (data, metadata)
     return False
 
-shutil.rmtree("docs/")
+if os.path.exists("docs/"):
+    shutil.rmtree("docs/")
 os.makedirs("docs/", exist_ok=True)
 
 
