@@ -78,7 +78,7 @@ def load_scenarios():
             md_problem = element[0].split(":")  # Get problem and split it
             md_problem[1] = list(map(int, md_problem[1].split(",")))  # Turn all elements into ints and make it a list
 
-            dictionary = {md_problem[0]: md_problem[1]}  # Prepare final dictionary
+            dictionary = {"problems": md_problem[1]}  # Prepare final dictionary
         scenario[0] = dictionary  # Give it to scenarios list (AST format)
         scenarios_data[i][0] = dictionary  # Give it to scenarios_data list (HTML format)
 
@@ -165,7 +165,8 @@ def load_problems():
 
 def load_ideas():
     global ideas_data
-    files_paths = [path + "/ideas/" + a for a in os.listdir(path + "/ideas")]
+    ideas_names = os.listdir(path + "/ideas")
+    files_paths = [path + "/ideas/" + a for a in ideas_names]
     ideas = []
     ideas_data = []
     for file_path in files_paths:
@@ -185,13 +186,22 @@ def load_ideas():
     # ['id: 2']
     # ['id: 3']
 
+    ids = []
     for i, idea in enumerate(ideas):
         if (element:=idea[0]) is not None:
             md_id = element[0].split(":")  # Get id and split it
-
-            dictionary = {md_id[0]: [int(md_id[1])]}  # Prepare final dictionary
+            if (n:=md_id[1].split(",")[0]) != "":
+                if int(n) in ids:
+                    raise ValueError(f"{ideas_names[i]}'s id has already been used, pick another one")
+                md_id[1] = int(n)  # Turn all elements into ints and make a list
+                ids.append(int(n))
+            else:
+                raise ValueError(f"{ideas_names[i]} doesn't have any value for id in its metadata field, assign a value to id that no other problem shares")
+            dictionary = {"id": [int(md_id[1])]}  # Prepare final dictionary
             idea[0] = dictionary  # Give it to ideas list (AST format)
             ideas_data[i][0] = dictionary  # Give it to ideas_data list (HTML format)
+        else:
+            raise ValueError(f"{ideas_names[i]} is lacking its metadata field, paste this all the way up in your problem.md:\n---\nid: \n---\n\nAnd assign a value to id that no other problem shares like id: 2\n")
 
     # Now it looks like this
 
