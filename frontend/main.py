@@ -36,7 +36,6 @@ def replace_img_source(data):
 def setup():
     global SITE_BASE_URL
     SITE_BASE_URL = os.getenv("SITE_BASE_URL", "/scenarios/")
-    SITE_BASE_URL = "/"
 
     if os.path.exists("docs/"):
         shutil.rmtree("docs/")
