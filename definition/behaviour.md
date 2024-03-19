@@ -1,0 +1,23 @@
+# Agent Behaviours
+
+- Externally Directed Behaviour
+    - Agent-Agent Interaction
+        - Communication
+            - Ask Questions
+            - Answer Questions
+            - Make Statements
+            - React on Statements
+        - Instruction Following
+            - Immediate Instructions
+            - Delayed Instructions
+            - Periodic Instructions
+            - Event-driven Instructions
+    - Agent-World Interaction
+        - Discrete Controls (function calls)
+        - Continuous Controls (angle of rotation of a joint)
+- Internally Directed Behaviour
+    - Learning
+        - Learning New Concepts
+        - Learning Concept Relations
+        - Learning World Model Logic
+        - Learning Real World Discrete Controls
