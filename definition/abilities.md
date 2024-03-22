@@ -1,34 +1,36 @@
-Let's compact all my symbolic theory of elements, components, relationships, behaviours, attribute, patterns etc. Into just "UST" (Universal symbolic theory)
+<!-- When adding abilities, check if they make sense for: A Human, our agent, and a LLM  -->
 
 Ability
 - To perceive
-    - To define env functions (Element solidification) of UST instances
+    - To simplify perceived entities or their attributes into single simpler ones
     - To see>
         - To read text
     - To hear
-    - To be able to identify any UST instance
-- To make decision
+    - To be able to identify and abstract any object or concept
+
+- To make decisions
     - Association cause -> effect
     - To reason using logic
     - To do inner simulations
         - To plan
         - To do mental logic processes like comparison
+
+- To communicate
+    - To react accordingly to the sentence heard (IN)
+        <!-- (This can be an instruction, a question, etc.) -->
+    - To communicate ideas (OUT)
+        - To ask questions (IN)
+        - To answer questions (OUT)
+    - To relate words with the concept they represent
+        <!-- This ability is crucial to truly understand any sentence -->
+- To learn
+    - To learn autonomously (Trial and error, experiment)
+        - To infere knowledge
+        - To manage new knowledge
+
 - To act
     - To define act functions (Act solidification)
     - To follow instructions/algorithms/protocols
-
-- To have full mental cycles
-    - To communicate
-        - To route ideas (IN)
-        - To communicate ideas (OUT)
-            - To ask questions (IN)
-            - To answer questions (OUT)
-        - To break text into logic relatable bits (This is what makes us truly understand ideas)
-            This ability is crucial, with this you also gain the ability:
-            - To understand and answer any question
-    - To learn
-        - To learn autonomusly (Trial and error, experiment)
-            - To infere knowledge
 
 - To understand and remember
     - To understand time
@@ -38,9 +40,5 @@ Ability
     - To understand space
     - To store semantinc memories
     - To store episodic memories
-
     - To manage temporal and long term memory
-
-    - To understand any system (LRD)
-
-    - To be able to store, abstract and categorize any UST instance
+    - To be able to store, abstract and categorize any type of knowledge
