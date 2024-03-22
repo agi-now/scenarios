@@ -21,7 +21,7 @@ Ability ...
     - 1.1.1 to read text
   - 1.2 to hear
 
-- 3\. to communicate
+- 2\. to communicate
   - to react accordingly to the sentence heard (IN)
     <!-- (This can be an instruction, a question, etc.) -->
   - to communicate ideas (OUT)
@@ -29,19 +29,19 @@ Ability ...
     - to answer questions (OUT)
   - to relate words with the concept they represent
     <!-- This ability is crucial to truly understand any sentence -->
-- 4\. to learn
+- 3\. to learn
   - to learn autonomously (Trial and error, experiment)
     - to infer knowledge
     - to manage new knowledge
   - to transfer abstract knowledge between systems
   - to generalise knowledge from an instance to a concept
 
-- 5\. to act
+- 4\. to act
   - to make frequent complex actions semiautomatic (Act solidification)
   - to follow instructions/algorithms/protocols
   - to coordinate your actions in a temporal pattern
 
-- 6\. [discuss] remember
+- ?\. [discuss] remember
   - to manage temporal and long term memory
   - to be able to store, abstract and categorize any type of knowledge
 
