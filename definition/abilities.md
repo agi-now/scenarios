@@ -29,6 +29,7 @@ Ability ...
     - to answer questions (OUT)
   - to relate words with the concept they represent
     <!-- This ability is crucial to truly understand any sentence -->
+
 - 3\. to learn
   - to learn autonomously (Trial and error, experiment)
     - to infer knowledge
