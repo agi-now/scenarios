@@ -17,9 +17,9 @@ It's a good idea to reolve all the tags before merging a PR.
 Ability ...
 
 - 1\. to perceive
-  - 1.1 to see
+  - 1.1 to percieve visual information
     - 1.1.1 to read text
-  - 1.2 to hear
+  - 1.2 to percive auditory information
 
 - 2\. to communicate
   - to react accordingly to the sentence heard (IN)
