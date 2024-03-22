@@ -59,6 +59,7 @@ Ability ...
   - to be able to store, abstract and categorize any type of knowledge
 
 - 6\. to represent knowledge
+  <!-- We also need to add memory somewhere here, the ability to remember things that we can represent -->
   - 6.1 to represent conceptual knowledge
     - 6.1.1 to represent conceptual hierarchies
   - 6.2 to represent spatial information
