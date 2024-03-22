@@ -18,7 +18,7 @@ Ability ...
 
 - 1\. to perceive
   - 1.1 to percieve visual information
-    - 1.1.1 to read text
+    - 1.1.1 to percieve textual information
   - 1.2 to percive auditory information
 
 - 2\. to communicate
