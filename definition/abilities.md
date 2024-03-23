@@ -90,4 +90,6 @@ Ability ...
   - 6.6 to represent cause -> effect relations
     - 6.6.1 to represent immediate cause -> effect relations
     - 6.6.2 to represent delayed cause -> effect relations
-  - 6.7 to represent abstract color information
+  - 6.7 to represent color information
+    - 6.7.1 to represent color brightness information
+    - 6.7.2 to represent conceptual color information
