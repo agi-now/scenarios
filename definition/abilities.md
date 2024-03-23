@@ -36,7 +36,7 @@ Ability ...
   - to follow instructions/algorithms/protocols
   - to coordinate your actions in a temporal pattern
 
-  - 2\. [discuss,composite] to communicate
+  - 2.3 [discuss,composite] to communicate
     - to react accordingly to the sentence heard (IN)
       <!-- (This can be an instruction, a question, etc.) -->
     - to communicate ideas (OUT)
@@ -93,5 +93,5 @@ Ability ...
     - 5.6.1 to represent immediate cause -> effect relations
     - 5.6.2 to represent delayed cause -> effect relations
   - 5.7 to represent color information
-    - 5.7.1 to represent color brightness information
-    - 5.7.2 to represent conceptual color information
+    - 5.7.1 to represent conceptual color information
+    - 5.7.2 to represent conceptual color brightness information
