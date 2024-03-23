@@ -29,6 +29,9 @@ Ability ...
     - 1.1.5 to percive proximity information
   - 1.2 to percive auditory information
   - 1.3 to percive tactile information
+    - 1.3.1 to percive physical contact information
+    - 1.3.1 to percive pressure information
+    - 1.3.1 to percive temperature information
   - 1.4 to percive olfactory information
   - 1.5 to percive balance and orientation information
 
