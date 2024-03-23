@@ -10,6 +10,7 @@ tags:
 - `invalid` - the entry is not formulated as an ability
 - `remove` - the entry is not needed because it is invalid or unclear,it needs to be deleted or replaced
 - `composite` - this ability spans across different parent abilities and needs to be split up
+- `example` - not an ability, but it's example. replace with an actual ability when ready
 
 It's a good idea to reolve all the tags before merging a PR.
 -->
