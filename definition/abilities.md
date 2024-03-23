@@ -24,7 +24,8 @@ Ability ...
       - to percieve vertical textual information
     - 1.1.2 to percive brightness information
     - 1.1.3 to percive color information
-    -
+    - 1.1.4 to percive texture information
+    - 1.1.5 to percive proximity information
   - 1.2 to percive auditory information
   - 1.3 to percive tactile information
   - 1.4 to percive olfactory information
