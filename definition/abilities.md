@@ -75,6 +75,8 @@ Ability ...
     - 5.1.1 to represent hierarchies of concepts
     - 5.1.2 [discuss] to represent episodic knowledge about concepts ???
     - 5.1.3 to represent semantic knowledge about concepts
+      - to represent composition relationships between concepts
+        one concept is a part of another concept
       - [example] people have one head
       - [example] blood transfers oxygen
     - 5.1.4 to represent associatians between concepts
