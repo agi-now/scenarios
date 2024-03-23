@@ -66,30 +66,30 @@ Ability ...
   - to think temporaly (to think about the order of actions. maybe add planning inside)
 
 - 5\. to represent knowledge/memory  
-  - 6.1 to represent knowledge about concepts (semantic)
-    - 6.1.1 to represent hierarchies of concepts
-    - 6.1.2 [discuss] to represent episodic knowledge about concepts ???
-    - 6.1.3 to represent semantic knowledge about concepts
+  - 5.1 to represent knowledge about concepts (semantic)
+    - 5.1.1 to represent hierarchies of concepts
+    - 5.1.2 [discuss] to represent episodic knowledge about concepts ???
+    - 5.1.3 to represent semantic knowledge about concepts
       - [example] people have one head
       - [example] blood transfers oxygen
-    - 6.1.4 to represent associatians between concepts
-      - 6.1.4.1 to represent associations between a concept of a color and another concept
-  - 6.2 to represent knowledge about objects
-    - to represent episodic knowledge about objects
-    - to represent semantic knowledge about objects
-  - 6.3 to represent spatial information
-    - 6.3.1 to represent absolute abstract location of objects
-    - 6.3.2 to represent categorical distances between objects
-    - 6.3.3 to represent relative abstract location of objects
-    - 6.3.4 to associate spatially close objects
-  - 6.4 to represent temporal information
-    - 6.4.1 to represent time of events
-    - 6.4.2 to represent order of events
-    - 6.4.3 to associate temporally close events
-  - 6.5 to represent systems
-  - 6.6 to represent cause -> effect relations
-    - 6.6.1 to represent immediate cause -> effect relations
-    - 6.6.2 to represent delayed cause -> effect relations
-  - 6.7 to represent color information
-    - 6.7.1 to represent color brightness information
-    - 6.7.2 to represent conceptual color information
+    - 5.1.4 to represent associatians between concepts
+      - 5.1.4.1 to represent associations between a concept of a color and another concept
+  - 5.2 to represent knowledge about objects
+    - 5.2.1 to represent episodic knowledge about objects
+    - 5.2.2 to represent semantic knowledge about objects
+  - 5.3 to represent spatial information
+    - 5.3.1 to represent absolute abstract location of objects
+    - 5.3.2 to represent categorical distances between objects
+    - 5.3.3 to represent relative abstract location of objects
+    - 5.3.4 to associate spatially close objects
+  - 5.4 to represent temporal information
+    - 5.4.1 to represent time of events
+    - 5.4.2 to represent order of events
+    - 5.4.3 to associate temporally close events
+  - 5.5 to represent systems
+  - 5.6 to represent cause -> effect relations
+    - 5.6.1 to represent immediate cause -> effect relations
+    - 5.6.2 to represent delayed cause -> effect relations
+  - 5.7 to represent color information
+    - 5.7.1 to represent color brightness information
+    - 5.7.2 to represent conceptual color information
